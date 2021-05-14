@@ -1,0 +1,75 @@
+﻿@model HousingSociety.Models.User_Maintainance
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout_User.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User_Maintainance</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Flat_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Flat_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maintainance_Bill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maintainance_Bill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Month)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Month)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.REGID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

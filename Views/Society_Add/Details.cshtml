@@ -1,0 +1,92 @@
+﻿@model HousingSociety.Models.Society_Add
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h2>Society Details</h2>
+
+<div>
+    @*<h4>Society_Add</h4>*@
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.REGID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REGID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.POST)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.POST)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Flat_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Flat_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time_From)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time_From)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time_To)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time_To)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to Society Modify", "Index", "Society_Add")  |
+    @Html.ActionLink("UPDATE", "Edit", new { id = Model.Email }) 
+    @*@Html.ActionLink("Back to List", "Index")*@
+</p>

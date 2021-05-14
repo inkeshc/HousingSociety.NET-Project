@@ -1,0 +1,82 @@
+﻿@model IEnumerable<HousingSociety.Models.Society_Add>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h2>Society User Details</h2>
+
+<p>
+  @*  @Html.ActionLink("Register Society", "Create")*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.REGID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.POST)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Wing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flat_No)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time_From)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time_To)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.REGID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.POST)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Wing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Flat_No)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Time_From)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Time_To)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        @*<td>
+            @Html.ActionLink("UPDATE", "Edit", new { id=item.Email }) |
+            @Html.ActionLink("VIEW", "Details", new { id=item.Email }) |
+            @Html.ActionLink("DELETE", "Delete", new { id=item.Email })
+        </td>*@
+    </tr>
+}
+
+</table>

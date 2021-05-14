@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        body {
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover:not(.active) {
+                    background-color: #111;
+                }
+
+        .active {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("HOUSING SOCIETY", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">*@
+    <ul>
+        <li class="active">@Html.ActionLink("Home", "User_Home", "Login_User")</li>
+        <li>@Html.ActionLink("Maintianance", "Index", "User_Maintainance")</li>
+        <li>@Html.ActionLink("Request", "Create", "User_Request")</li>
+        <li>@Html.ActionLink("Feedback", "Create", "User_Feedback")</li>
+        <li>@Html.ActionLink("Profile", "Index_User", "Society__Add_User" )@*new { id = Model.Login_User.Email })*@</li>
+        @*@Html.ActionLink("Edit", "Edit", new { id = Model.Email }) |*@
+        <li>@Html.ActionLink("Contact", "Contact", "Login_User")</li>
+        <li>@Html.ActionLink("Logout", "Index", "Home")</li>
+    </ul>
+            @*</div>
+        </div>
+    </div>*@
+    <div class="container body-content">
+        @RenderBody()
+       
+        <footer>
+            <p>Develop by - DAC GROUP 5, @DateTime.Now.Year</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

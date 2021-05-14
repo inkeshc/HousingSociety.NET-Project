@@ -1,0 +1,64 @@
+﻿@model IEnumerable<HousingSociety.Models.User_Request>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_Society.cshtml";
+}
+<br />
+<h2>Society Member Request</h2>
+
+<p>
+   @* @Html.ActionLink("Create New", "Create")*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Fname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Wing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flat_No)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Request_Priority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Request_Detail)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Wing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Flat_No)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Request_Priority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Request_Detail)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.REGID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.REGID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.REGID })
+        </td>
+    </tr>
+}
+
+</table>
