@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .mySlides {
+            display: none;
+        }
+    </style>
+ 
+        <style>
+            .div1 {
+                border: 1px solid gray;
+                padding: 8px;
+            }
+
+            h1 {
+                text-align: center;
+                text-transform: uppercase;
+                color: #4CAF50;
+            }
+
+            p {
+                text-indent: 50px;
+                text-align: justify;
+                letter-spacing: 3px;
+            }
+
+            a {
+                text-decoration: none;
+                color: #008CBA;
+            }
+        </style>
+  
+</head>
+
+<div class="w3-content w3-section" style="max-width:700px">
+    <img class="mySlides" src="~/Content/Images/1.jpg" style="width:100%">
+    <img class="mySlides" src="~/Content/Images/2.jpg" style="width:100%">
+    <img class="mySlides" src="~/Content/Images/3.jpg" style="width:100%">
+    <img class="mySlides" src="~/Content/Images/4.jpg" style="width:100%">
+    <img class="mySlides" src="~/Content/Images/5.jpg" style="width:100%">
+    <img class="mySlides" src="~/Content/Images/6.jpg" style="width:100%">
+    <img class="mySlides" src="~/Content/Images/7.jpg" style="width:100%">
+</div>
+
+
+<script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) { myIndex = 1 }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+</script>
+
+
+@*<div class="row">*@
+    <div @*class="col-md-4"*@>
+        <div class="div1">
+            <h1>About us</h1>
+            <p>
+                <font face="arial">
+                    A housing society management and billing project that effectively manages and handles all the functioning of
+                    a co-operative housing society. The system can store the data of all society members. The system also maintain and calculates
+                    society maintainance bill. The system consists of automatic bill generation facility. The system need a administrator to input the data.
+                </font>
+            </p>
+        </div>
+    </div>
+
+@*</div>*@

@@ -1,0 +1,99 @@
+﻿@model HousingSociety.Models.Society_Add
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h2>Remove Society</h2>
+
+<h3>To Permanent Delete this Society Click on Delete Button.</h3>
+<div>
+    @*<h4>Society_Add</h4>*@
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.REGID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REGID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.POST)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.POST)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Flat_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Flat_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time_From)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time_From)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time_To)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time_To)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+
+        @*@Html.ActionLink("Back to List", "Index")*@
+        @Html.ActionLink("Back to Society Modify", "Index", "Society_Add")  |
+        <input type="submit" value="Delete" class="btn btn-default" />
+    </div>
+    }
+</div>
